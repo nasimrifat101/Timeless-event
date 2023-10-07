@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 const ServiceDetails = ({ card }) => {
     const {
@@ -40,7 +42,7 @@ const ServiceDetails = ({ card }) => {
               </div>
                <div className="relative">
                <img src={img} className="h-[550px] rounded-b-xl w-full" alt="Shoes" />
-               <button className="absolute top-[500px] p-7 border-none btn bg-yellow-400 w-full">Book Now</button>
+              <button className="absolute top-[500px] p-7 border-none btn bg-yellow-400 w-full">Book Now</button>
                </div>
             </div>
           </div>

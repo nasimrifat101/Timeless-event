@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import Nav from "../Navigation/Nav";
 
 const Details = () => {
@@ -24,7 +24,7 @@ const Details = () => {
               <p key={index}>{feature}</p>
             ))}
 
-            <button className="btn bg-yellow-400 font-bebas text-xl">Book Now at {price}</button>
+            <Link to='/services'><button className="btn bg-yellow-400 font-bebas text-xl">Book Now at {price}</button></Link>
           </div>
         </div>
       </div>

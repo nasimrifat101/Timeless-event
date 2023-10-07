@@ -1,4 +1,5 @@
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 
 const AboutUS = () => {
   return (
@@ -47,7 +48,9 @@ const AboutUS = () => {
           </div>
         </div> 
         <div className="flex justify-center p-10">
+        <Link to='/services'>
         <button className="btn bg-yellow-400 w-96 text-black font-bebas text-xl">Learn More About our services</button>
+        </Link>
           </div> 
       </div>
     </div>
