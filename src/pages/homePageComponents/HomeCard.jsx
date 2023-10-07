@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 const HomeCard = ({ card }) => {
-  const { img, title, description, price } = card;
+  const { img, title, description1, price } = card;
 
   return (
     <div className="">
@@ -15,8 +15,8 @@ const HomeCard = ({ card }) => {
         </figure>
         <div className="card-body space-y-3">
           <h2 className="card-title text-2xl font-bold">{title}</h2>
-          <p className="font-bebas text-2xl font-bold">{price}</p>
-          <p>{description}</p>
+          <p className="font-bebas text-2xl font-bold">Starting at  {price}</p>
+          <p>{description1}</p>
           <div className="card-actions justify-end">
             <button className="btn w-full bg-amber-300 font-bebas text-xl">
               See Details

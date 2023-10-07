@@ -7,7 +7,7 @@ const Details = () => {
   const idint = parseInt(id);
   const card = cards.find((card) => card.id === idint);
 
-  const { img, title, description, price, features } = card;
+  const { img, title, description, price,price2, price3, features, pkz1, pkz2, pkz3 } = card;
   return (
     <div>
       <Nav></Nav>
@@ -24,7 +24,21 @@ const Details = () => {
               <p key={index}>{feature}</p>
             ))}
 
-            <Link to='/services'><button className="btn bg-yellow-400 font-bebas text-xl">Book Now at {price}</button></Link>
+           <div className="py-10">
+            <h2 className="text-2xl font-semibold">Choose from </h2>
+           <div className="flex justify-between font-medium">
+              <h1>{pkz1}</h1>
+              <h1>{pkz2}</h1>
+              <h1>{pkz3}</h1>
+            </div>
+            <div className="flex justify-between font-bold">
+              <h1>{price}</h1>
+              <h1>{price2}</h1>
+              <h1>{price3}</h1>
+            </div>
+           </div>
+
+            <Link to={`/booknow/${id}`}><button className="btn w-full bg-yellow-400 font-bebas text-xl">Book Now</button></Link>
           </div>
         </div>
       </div>

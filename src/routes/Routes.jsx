@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services></Services>,
-        loader: ()=> fetch('../../public/services.json')
+        loader: ()=> fetch('../../public/category.json')
       },
       {
         path: "/details/:id",

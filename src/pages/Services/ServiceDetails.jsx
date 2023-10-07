@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 const ServiceDetails = ({ card }) => {
@@ -9,10 +8,9 @@ const ServiceDetails = ({ card }) => {
       pkz1,
       pkz2,
       pkz3,
-      price1,
+      price,
       price2,
       price3,
-      features,
     } = card;
     
     return (
@@ -20,7 +18,7 @@ const ServiceDetails = ({ card }) => {
         <div className="my-5">
           <div>
             <div className="card w-96 bg-base-100 shadow-xl">
-              <div className="card-body h-[540px]">
+              <div className="card-body h-[350px]">
                 <h2 className="card-title text-2xl">{title}</h2>
                 <div className="flex justify-between">
                   <h1>{pkz1}</h1>
@@ -28,17 +26,12 @@ const ServiceDetails = ({ card }) => {
                   <h1>{pkz3}</h1>
                 </div>
                 <div className="flex justify-between font-semibold">
-                  <h1>{price1}</h1>
+                  <h1>{price}</h1>
                   <h1>{price2}</h1>
                   <h1>{price3}</h1>
                 </div>
                 <p>{description}</p>
-                <div>
-                    <h1 className="text-xl font-semibold">Features</h1>
-                  {features.map((feature, index) => (
-                    <p key={index}>{feature}</p>
-                  ))}
-                </div>
+               
               </div>
                <div className="relative">
                <img src={img} className="h-[550px] rounded-b-xl w-full" alt="Shoes" />

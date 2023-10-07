@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Link, useLoaderData } from "react-router-dom";
 import Nav from "../Navigation/Nav";
 import ServiceDetails from "./ServiceDetails";
@@ -11,7 +11,7 @@ const Services = () => {
       <Nav />
       <div className="max-w-6xl mx-auto grid grid-cols-3 gap-4">
         {sCards.map((card) => (
-          <Link key={card.id} to={`/booknow/${card.id}`}>
+          <Link key={card.id} to={`/details/${card.id}`}>
             <ServiceDetails card={card} />
           </Link>
         ))}
