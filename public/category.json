@@ -1,0 +1,142 @@
+[
+    {
+      "id": 1,
+      "img": "https://i.postimg.cc/2SyDdJqt/marriage.jpg",
+      "title": "Wedding Planning",
+      "description": "Our Wedding Package offers comprehensive event planning services tailored to make your special day unforgettable.",
+      "features": [
+        "Venue Selection and Booking",
+        "Theme and Decor Planning",
+        "Catering Services",
+        "Entertainment Booking (DJ, Live Band, etc.)",
+        "Guest Coordination",
+        "Photography and Videography",
+        "Floral Arrangements"
+      ],
+      "price": "$5500"
+    },
+    {
+      "id": 2,
+      "img": "https://i.postimg.cc/T1CfcXTK/kelly-neil-e-ZX1-D12-IS9w-unsplash.jpg",
+      "title": "Birthday Party",
+      "description": "Celebrate your birthday with our Birthday Party Package, ensuring a fun-filled and memorable event for all.",
+      "features": [
+        "Venue Decoration",
+        "Customized Cake and Catering",
+        "Party Games and Entertainment",
+        "Themed Decorations",
+        "Party Favors",
+        "Floral Centerpieces",
+        "Event Photography"
+      ],
+      "price": "$1600"
+    },
+    {
+      "id": 3,
+      "img": "https://i.postimg.cc/DyzDRG2J/engegment.jpg",
+      "title": "Engagement Ceremony",
+      "description": "Mark the beginning of your journey together with our Engagement Ceremony Package, designed for elegant celebration.",
+      "features": [
+        "Venue Decoration with Floral Arrangements",
+        "Ring Ceremony Setup",
+        "Catering Services",
+        "Live Music or Instrumental Performance",
+        "Professional Photography",
+        "Floral Bouquets and Corsages",
+        "Guest Seating Arrangement"
+      ],
+      "price": "$2100"
+    },
+    {
+      "id": 4,
+      "img": "https://i.postimg.cc/c18CNvXH/jonathan-borba-Kv-MBOln0-u8-unsplash.jpg",
+      "title": "Anniversary",
+      "description": "Celebrate the years of love and togetherness with our Anniversary Package, curated for a heartfelt and joyous occasion.",
+      "features": [
+        "Themed Decorations",
+        "Dinner Banquet",
+        "Anniversary Cake",
+        "Speeches and Toasts",
+        "Musical Entertainment",
+        "Floral Table Centerpieces",
+        "Memory Lane Slideshow"
+      ],
+      "price": "$1900"
+    },
+    {
+      "id": 5,
+      "img": "https://i.postimg.cc/Fss6LL8F/brooke-lark-f8-Uq-Sigmto0-unsplash.jpg",
+      "title": "Retirement Party",
+      "description": "Bid farewell to a fulfilling career with our Retirement Party Package, ensuring a relaxed and enjoyable retirement celebration.",
+      "features": [
+        "Venue Setup with Comfortable Seating",
+        "Retirement Cake and Refreshments",
+        "Guest Speaker or Toast",
+        "Music and Entertainment",
+        "Memory Sharing Session",
+        "Floral Decor Elements",
+        "Photo Montage"
+      ],
+      "price": "$1300"
+    },
+    {
+      "id": 6,
+      "img": "https://i.postimg.cc/wxsXbTN5/noah-fuentes-RH9jq-Wtw-E-unsplash.jpg",
+      "title": "Baby Shower",
+      "description": "Welcome the newest member of the family with our Baby Shower Package, filled with joy, laughter, and adorable moments.",
+      "features": [
+        "Venue Decoration in Baby Theme",
+        "Baby Shower Games and Activities",
+        "Customized Desserts and Refreshments",
+        "Gift Opening Session",
+        "Floral Arrangements",
+        "Photo Booth with Baby Props",
+        "Thank-You Gifts for Guests"
+      ],
+      "price": "$1100"
+    },
+    {
+      "id": 7,
+      "img": "https://i.postimg.cc/76SL0cCz/kelsey-chance-Cut-TQTt2-Hy-I-unsplash.jpg",
+      "title": "Social Party",
+      "description": "Host a memorable social gathering with our Social Party Package, perfect for various occasions and celebrations.",
+      "features": [
+        "Customized Venue Decorations",
+        "Catering Services for Diverse Tastes",
+        "Entertainment Options (Music, Games, etc.)",
+        "Event Photography and Videography",
+        "Themed Decor Elements",
+        "Guest Interaction Activities"
+      ],
+      "price": "$900"
+    },
+    {
+      "id": 8,
+      "img": "https://i.postimg.cc/YCZ7q3Xm/floralservices.jpg",
+      "title": "Floral Services",
+      "description": "Enhance your event with our exquisite Floral Services, offering a variety of arrangements to add beauty and elegance.",
+      "features": [
+        "Bouquets and Corsages",
+        "Centerpieces",
+        "Venue Floral Decorations",
+        "Floral Archways",
+        "Floral Table Runners",
+        "Customized Floral Designs"
+      ],
+      "price": "Contact for Pricing"
+    },
+    {
+      "id": 9,
+      "img": "https://i.postimg.cc/N0msMksF/kal-visuals-tn9tm-Um-QA4-A-unsplash.jpg",
+      "title": "Photograph Service",
+      "description": "Capture your best moments with our Photographer Service. Experienced photographers to create lasting memories.",
+      "features": [
+        "High-Quality Event Photography",
+        "Professional Editing",
+        "Digital and Print Photo Packages",
+        "Customizable Photography Plans"
+      ],
+      "price": "Contact for Pricing"
+    }
+  ]
+  
