@@ -26,16 +26,18 @@ const Nav = () => {
           Services
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#42ea5b] underline" : ""
-          }
-          to="/blog"
-        >
-          Blog
-        </NavLink>
-      </li>
+     {
+      user &&  <li>
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "text-[#42ea5b] underline" : ""
+        }
+        to="/blog"
+      >
+        Blog
+      </NavLink>
+    </li>
+     }
     </>
   );
   return (

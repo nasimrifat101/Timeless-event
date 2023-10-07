@@ -6,6 +6,7 @@ import HomeCard from "../homePageComponents/homecard";
 import AboutUS from "../homePageComponents/AboutUS";
 import Footer from "../footer/Footer";
 import Marquee from "react-fast-marquee";
+import Recent from "../homePageComponents/Recent";
 
 const Home = () => {
   const cards = useLoaderData();
@@ -54,6 +55,7 @@ const Home = () => {
       </div>
       {/* cards over */}
       <AboutUS></AboutUS>
+      <Recent></Recent>
      <Footer></Footer>
     </div>
   );
