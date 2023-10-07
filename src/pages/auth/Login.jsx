@@ -4,6 +4,8 @@ import { BsGoogle } from "react-icons/bs";
 import { useContext } from "react";
 import Nav from "../Navigation/Nav";
 import { AuthContext } from "../../authProvider/AuthPrivider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const { logIn, googleLogin } = useContext(AuthContext);
@@ -23,9 +25,12 @@ const Login = () => {
     logIn(email, password)
       .then((res) => {
         console.log(res.user);
-        navigate(location?.state? location.state : '/')
+        navigate(location?.state ? location.state : "/");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        toast.error("Invalid email or password. Please try again.");
+      });
   };
   const handleGoogleLog = () => {
     googleLogin();
@@ -67,8 +72,12 @@ const Login = () => {
                       />
                       <div className="flex justify-between mt-2 text-sm">
                         <div className="flex items-center space-x-2">
-                          <input type="checkbox" name="checkbox" id="" />
-                          <label htmlFor="">Remember me</label>
+                          <input
+                            type="checkbox"
+                            name="checkbox"
+                            id="remember-me"
+                          />
+                          <label htmlFor="remember-me">Remember me</label>
                         </div>
                         <div className="text-yellow-400 font-bold">
                           <Link> Forgot Password?</Link>
@@ -102,6 +111,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
