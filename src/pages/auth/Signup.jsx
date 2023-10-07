@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsGoogle } from "react-icons/bs";
 import { useContext } from "react";
 import Nav from "../Navigation/Nav";
@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Signup = () => {
   const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -36,6 +37,7 @@ const Signup = () => {
     createUser(email, password)
       .then((res) => {
         console.log(res.user);
+        navigate('/')
         toast.success("Account Created Successfully");
       })
       .catch((error) => {
@@ -66,7 +68,7 @@ const Signup = () => {
                           type="text"
                           placeholder="Your Name"
                           name="name"
-                          className="input input-bordered"
+                          className="input input-bordered font-sans"
                           required
                         />
                       </div>
@@ -78,7 +80,7 @@ const Signup = () => {
                           type="email"
                           name="email"
                           placeholder="email"
-                          className="input input-bordered"
+                          className="input input-bordered font-sans"
                           required
                         />
                       </div>
@@ -90,7 +92,7 @@ const Signup = () => {
                           type="password"
                           placeholder="password"
                           name="password"
-                          className="input input-bordered"
+                          className="input input-bordered font-sans"
                           required
                         />
                         <div className="flex justify-between mt-2 text-sm">
