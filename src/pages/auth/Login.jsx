@@ -32,8 +32,13 @@ const Login = () => {
         toast.error("Invalid email or password. Please try again.");
       });
   };
-  const handleGoogleLog = () => {
-    googleLogin();
+  const handleGoogleLog = async () => {
+  try{
+    await googleLogin();
+    navigate(location?.state ? location.state : "/");
+  } catch(error){
+    console.log(error)
+  }
   };
 
   return (
