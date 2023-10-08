@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link, useNavigate } from "react-router-dom";
 import { BsGoogle } from "react-icons/bs";
 import { useContext } from "react";
@@ -5,19 +6,24 @@ import Nav from "../Navigation/Nav";
 import { AuthContext } from "../../authProvider/AuthPrivider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { storage } from "../../firebase/firebase.config";
+import { ref } from "firebase/storage";
 
 const Signup = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
+  const stora = ref(storage, 'profilePicture');
 
   const handleSignUp = (e) => {
     e.preventDefault();
 
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
+    const profile = form.get('profilePicture')
     const email = form.get("email");
     const password = form.get("password");
-    console.log(name, email, password);
+    console.log(name, profile, email, password);
+    
 
     if (password.length < 6) {
       toast.error("Password must be at least 6 characters long.");
@@ -37,12 +43,19 @@ const Signup = () => {
     createUser(email, password)
       .then((res) => {
         console.log(res.user);
-        navigate('/')
+        updateUserProfile(name, "https://example.com/default-profile.jpg")
+          .then(() => {
+            console.log("Profile updated!");
+          })
+          .catch((error) => {
+            console.error("Error updating profile:", error);
+          });
+        navigate("/");
         toast.success("Account Created Successfully");
       })
       .catch((error) => {
         console.log(error);
-        toast.error("sSomething went wrong. Please try Again");
+        toast.error("Email already exist");
       });
   };
 
@@ -70,6 +83,17 @@ const Signup = () => {
                           name="name"
                           className="input input-bordered font-sans"
                           required
+                        />
+                      </div>
+                      <div className="form-control">
+                        <label className="label">
+                          <span className="label-text">Profile Picture</span>
+                        </label>
+                        <input
+                          type="file"
+                          accept="image/*"
+                          name="profilePicture"
+                          className="input input-bordered font-sans"
                         />
                       </div>
                       <div className="form-control">
