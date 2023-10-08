@@ -70,14 +70,10 @@ const Home = () => {
       <div data-aos="zoom-in-down">
         <AboutUS></AboutUS>
       </div>
-      <div data-aos="fade-left" data-aos-offset="300" data-aos-easing='ease-in-sine'>
+      <div data-aos="fade-down">
         <Reviews></Reviews>
       </div>
-      <div
-        data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-      >
+      <div data-aos="fade-in">
         <Recent></Recent>
       </div>
       <Footer></Footer>
