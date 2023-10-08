@@ -11,7 +11,7 @@ const Recent = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto my-10">
+    <div className="max-w-6xl mx-auto mt-32">
       <div>
         <h3 className="text-4xl font-bold text-center">Recent works</h3>
         <div>
