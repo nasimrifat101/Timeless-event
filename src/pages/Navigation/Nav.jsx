@@ -38,6 +38,18 @@ const Nav = () => {
       </NavLink>
     </li>
      }
+     {
+      user &&  <li>
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "text-[#42ea5b] underline" : ""
+        }
+        to="/dashboard"
+      >
+        Dashboard
+      </NavLink>
+    </li>
+     }
     </>
   );
   return (

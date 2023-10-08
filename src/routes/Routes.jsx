@@ -8,6 +8,7 @@ import Details from "../pages/Details/Details";
 import Signup from "../pages/auth/signup";
 import PrivateRoute from "./PrivateRoute";
 import BookNow from "../pages/bookNow/BookNow";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +43,11 @@ export const router = createBrowserRouter([
         element: <PrivateRoute><Details></Details></PrivateRoute>,
         loader: () => fetch("../../public/category.json"),
       },
+      {
+        path: '/dashboard',
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+      }
+
     ],
   },
 ]);

@@ -173,13 +173,13 @@
       "Floral Table Runners",
       "Customized Floral Designs"
     ],
-    "price": "Contact for Pricing",
+    "price": "$320",
     "pkz1": "Elegant",
     "pkz2": "Opulent",
     "pkz3": "Luxurious",
-    "price1": "Contact for Pricing",
-    "price2": "Contact for Pricing",
-    "price3": "Contact for Pricing"
+    "price1": "$320",
+    "price2": "$720",
+    "price3": "$1020"
   },
   {
     "id": 9,
@@ -193,12 +193,12 @@
       "Digital and Print Photo Packages",
       "Customizable Photography Plans"
     ],
-    "price": "Contact for Pricing",
+    "price": "$320",
     "pkz1": "Creative",
     "pkz2": "Artistic",
     "pkz3": "Innovative",
-    "price1": "Contact for Pricing",
-    "price2": "Contact for Pricing",
-    "price3": "Contact for Pricing"
+    "price1": "$320",
+    "price2": "$420",
+    "price3": "$520"
   }
 ]
