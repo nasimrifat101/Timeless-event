@@ -7,22 +7,22 @@ import { AuthContext } from "../../authProvider/AuthPrivider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { storage } from "../../firebase/firebase.config";
-import { ref } from "firebase/storage";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 
 const Signup = () => {
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const { createUser, updateUserProfile, googleLogin } = useContext(AuthContext);
   const navigate = useNavigate();
-  const stora = ref(storage, 'profilePicture');
+  const storageRef = ref(storage, 'profilePicture');
 
-  const handleSignUp = (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
 
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
-    const profile = form.get('profilePicture')
+    const profilePicture = form.get("profilePicture");
     const email = form.get("email");
     const password = form.get("password");
-    console.log(name, profile, email, password);
+    
     
 
     if (password.length < 6) {
@@ -40,24 +40,43 @@ const Signup = () => {
       return;
     }
 
-    createUser(email, password)
-      .then((res) => {
-        console.log(res.user);
-        updateUserProfile(name, "https://example.com/default-profile.jpg")
-          .then(() => {
-            console.log("Profile updated!");
-          })
-          .catch((error) => {
-            console.error("Error updating profile:", error);
-          });
-        navigate("/");
-        toast.success("Account Created Successfully");
-      })
-      .catch((error) => {
-        console.log(error);
-        toast.error("Email already exist");
-      });
+    try {
+      const storageRef = ref(storage, `profilePictures/${name}-profilePicture.jpg`);
+      await uploadBytes(storageRef, profilePicture);
+      const imageURL = await getDownloadURL(storageRef);
+  
+      
+      // Create user and update profile with imageURL
+      createUser(email, password)
+        .then((res) => {
+          updateUserProfile(name, imageURL)
+            .then(() => {
+              console.log("Profile updated!");
+            })
+            .catch((error) => {
+              console.error("Error updating profile:", error);
+            });
+          navigate("/");
+          toast.success("Account Created Successfully");
+        })
+        .catch((error) => {
+          console.log(error);
+          toast.error("Email already exists");
+        });
+    } catch (error) {
+      console.error("Error uploading profile picture:", error);
+      toast.error("Error uploading profile picture. Please try again.");
+    }
   };
+  const handleGoogleLog = async () => {
+    try{
+      await googleLogin();
+      navigate(location?.state ? location.state : "/");
+    } catch(error){
+      console.log(error)
+    }
+    };
+
 
   return (
     <div>
@@ -93,7 +112,7 @@ const Signup = () => {
                           type="file"
                           accept="image/*"
                           name="profilePicture"
-                          className="input input-bordered font-sans"
+                          className="input input-bordered font-sans p-2"
                         />
                       </div>
                       <div className="form-control">
@@ -150,7 +169,7 @@ const Signup = () => {
             <div className="divider">OR</div>
             <div className="grid h-fit card rounded-box place-items-center">
               <div className="space-y-3 flex flex-col mb-10">
-                <button className="btn btn-outline rounded-full w-96">
+                <button onClick={handleGoogleLog} className="btn btn-outline rounded-full w-96">
                   <BsGoogle className="text-xl"></BsGoogle>Continue With Google
                 </button>
               </div>

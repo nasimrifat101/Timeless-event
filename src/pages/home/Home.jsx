@@ -10,6 +10,8 @@ import Recent from "../homePageComponents/Recent";
 import Reviews from "../homePageComponents/Reviews";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const cards = useLoaderData();
@@ -77,6 +79,7 @@ const Home = () => {
         <Recent></Recent>
       </div>
       <Footer></Footer>
+      <ToastContainer position="top-right" />
     </div>
   );
 };
