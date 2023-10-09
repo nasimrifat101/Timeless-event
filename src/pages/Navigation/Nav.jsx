@@ -13,7 +13,7 @@ const Nav = () => {
           }
           to="/"
         >
-          Home
+          <span className="font-young">Home</span>
         </NavLink>
       </li>
       <li>
@@ -23,7 +23,7 @@ const Nav = () => {
           }
           to="/services"
         >
-          Services
+          <span className="font-young">Services</span>
         </NavLink>
       </li>
      {
@@ -34,7 +34,7 @@ const Nav = () => {
         }
         to="/dashboard"
       >
-        Dashboard
+        <span className="font-young">Dashboard</span>
       </NavLink>
     </li>
      }
@@ -46,7 +46,7 @@ const Nav = () => {
         }
         to="/brainstorm"
       >
-        Brainstorm 
+        <span className="font-young">Brainstorm</span>
       </NavLink>
     </li>
      }
