@@ -11,6 +11,12 @@ const Brainstorm = () => {
   const [selectedDate, setSelectedDate] = useState(storedSelectedDate);
   const [events, setEvents] = useState(storedEvents);
   const [ideas, setIdeas] = useState([]);
+  const [remainingTime, setRemainingTime] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   const brainstormBoxRef = useRef(null);
 
@@ -21,6 +27,16 @@ const Brainstorm = () => {
       setIdeas((prevIdeas) => [...prevIdeas, idea]);
     }
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newRemainingTime = calculateRemainingTime(selectedDate);
+      setRemainingTime(newRemainingTime);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [selectedDate]);
+
   useEffect(() => {
     const olElement = document.getElementById("brainstorm-list");
     if (olElement) {
@@ -47,11 +63,22 @@ const Brainstorm = () => {
     localStorage.setItem("selectedDate", newSelectedDate);
   };
 
-  useEffect(() => {
-    localStorage.setItem("selectedEvent", selectedEvent);
-    localStorage.setItem("selectedDate", selectedDate);
-  }, [selectedEvent, selectedDate]);
+  const calculateRemainingTime = (selectedDate) => {
+    const eventDate = new Date(selectedDate).getTime();
+    const now = new Date().getTime();
+    const timeDifference = eventDate - now;
 
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor(
+      (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    return { days, hours, minutes, seconds };
+  };
   return (
     <div className="bg-white">
       <Nav />
@@ -92,6 +119,15 @@ const Brainstorm = () => {
               onKeyDown={handleInputIdeas}
             />
           </div>
+          <div className="my-5">
+            <h1 className="text-3xl">Time Remaining</h1>
+            <div className="flex space-x-3">
+              <p className="font-bebas text-2xl">Days: {remainingTime.days}</p>
+              <p className="font-bebas text-2xl">Hours: {remainingTime.hours}</p>
+              <p className="font-bebas text-2xl">Minutes: {remainingTime.minutes}</p>
+              <p className="font-bebas text-2xl">Seconds: {remainingTime.seconds}</p>
+            </div>
+          </div>
         </div>
         {/* second div */}
         <div>
@@ -102,8 +138,8 @@ const Brainstorm = () => {
                 : "Select an event to brainstorm ideas"}
             </h1>
             <p>{selectedDate ? `Date: ${selectedDate}` : ""}</p>
-            <ol className="list-disc pl-10" id="brainstorm-list">
-              {/* appendchild here */}
+            <ol className="list-disc pl-10 text-sm font-semibold" id="brainstorm-list">
+        
             </ol>
           </div>
         </div>

@@ -30,8 +30,13 @@ const Details = () => {
     );
   
     if (!isCardSelected) {
-      const cardPrice = parseFloat(card.price.replace(/[^\d.]/g, ''));
-      selectedCards.push({ ...card, price: cardPrice });
+      const selectedCard = {
+        id: idint,
+        title: title,
+        price: parseFloat(price.replace(/[^\d.]/g, '')),
+      };
+  
+      selectedCards.push(selectedCard);
       localStorage.setItem("selectedCards", JSON.stringify(selectedCards));
       toast.success("Event Added");
     } else {
