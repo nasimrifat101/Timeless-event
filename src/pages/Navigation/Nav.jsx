@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../authProvider/AuthPrivider";
-import { CiLogin, CiLogout } from "react-icons/ci";
+import { CiLogin } from "react-icons/ci";
 
 const Nav = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -136,9 +136,11 @@ const Nav = () => {
               </div>
 
               <div className="block lg:hidden">
-                <button className="btn text-xl">
+              <Link to='/login'>
+              <button className="btn text-xl">
                   <CiLogin></CiLogin>
                 </button>
+              </Link>
               </div>
             </div>
           )}
