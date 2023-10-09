@@ -40,5 +40,11 @@ Our commitment to exceptional customer service is unwavering. We prioritize your
 #### 7. **Contact and Support**
    Reach out to us effortlessly via our contact form or live chat support, where our team is ready to assist you at every step.
 
+#### 8. **Event Booking**
+   user can easily book events from the service page when they're logged in.
+
+#### 8. **Event Planing**
+   user can easily plan thir event with us in the brainstorming section.
+
 ### **Let's Create Timeless Memories Together**
 Contact us today to embark on a journey to create timeless memories that will be cherished for a lifetime. Timeless Events: Where Your Dreams Become Timeless Realities.
