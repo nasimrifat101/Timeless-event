@@ -9,6 +9,8 @@ import Signup from "../pages/auth/signup";
 import PrivateRoute from "./PrivateRoute";
 import BookNow from "../pages/bookNow/BookNow";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import Brainstorm from "../pages/Feedback/Brainstorm";
+
 
 export const router = createBrowserRouter([
   {
@@ -46,6 +48,10 @@ export const router = createBrowserRouter([
       {
         path: '/dashboard',
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+      },
+      {
+        path: '/brainstorm',
+        element: <PrivateRoute><Brainstorm></Brainstorm></PrivateRoute>,
       }
 
     ],

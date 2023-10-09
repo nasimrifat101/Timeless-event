@@ -32,21 +32,21 @@ const Nav = () => {
         className={({ isActive, isPending }) =>
           isPending ? "pending" : isActive ? "text-[#42ea5b] underline" : ""
         }
-        to="/blog"
+        to="/dashboard"
       >
-        Blog
+        Dashboard
       </NavLink>
     </li>
      }
-     {
+       {
       user &&  <li>
       <NavLink
         className={({ isActive, isPending }) =>
           isPending ? "pending" : isActive ? "text-[#42ea5b] underline" : ""
         }
-        to="/dashboard"
+        to="/brainstorm"
       >
-        Dashboard
+        Brainstorm 
       </NavLink>
     </li>
      }
