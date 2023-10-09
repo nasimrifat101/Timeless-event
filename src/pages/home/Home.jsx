@@ -46,7 +46,7 @@ const Home = () => {
           </Marquee>
         </div>
         <div className="max-w-6xl mx-auto mt-10">
-          <div className="grid grid-cols-3 gap-7">
+          <div className="flex flex-col justify-center items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-7">
             {Array.isArray(filteredCards) &&
               filteredCards.map((card) => (
                 <Link to={`/details/${card.id}`} key={card.id}>

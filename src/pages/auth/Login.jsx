@@ -49,7 +49,7 @@ const Login = () => {
           <div className="grid h-fit card rounded-box place-items-center">
             <div className="">
               <div className="hero-content flex-col">
-                <div className="card w-[500px] max-w-xl border border-black bg-base-100">
+                <div className="card lg:w-[500px] max-w-xl border border-black bg-base-100">
                   <h1 className="text-2xl px-8 pt-10 font-bold">Login</h1>
                   <form onSubmit={hadnleLogIn} className="card-body">
                     <div className="form-control">
@@ -76,7 +76,7 @@ const Login = () => {
                         required
                       />
                       <div className="flex justify-between mt-2 text-sm">
-                        <div className="flex items-center space-x-2">
+                        <div className="flex items-center space-x-2 hidden lg:block">
                           <input
                             type="checkbox"
                             name="checkbox"
@@ -107,7 +107,7 @@ const Login = () => {
           <div className="grid h-fit card rounded-box place-items-center">
             <div className="space-y-3 flex flex-col mb-10">
               <button
-                className="btn btn-outline rounded-full w-96"
+                className="btn btn-outline rounded-full lg:w-96"
                 onClick={handleGoogleLog}
               >
                 <BsGoogle className="text-xl"></BsGoogle>Continue With Google

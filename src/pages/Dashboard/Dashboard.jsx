@@ -33,7 +33,7 @@ const Dashboard = () => {
       <Nav />
       <div className="mt-10">
         {user ? (
-          <div className="max-w-6xl mx-auto grid grid-cols-3">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-3">
             <div className="col-span-1">
               <img
                 className="w-full"
@@ -43,7 +43,7 @@ const Dashboard = () => {
             </div>
             <div className="col-span-1 px-10">
               <h1>
-                <span className="text-5xl font-semibold">
+                <span className="lg:text-5xl font-semibold">
                   {user.displayName}
                 </span>
               </h1>
@@ -52,7 +52,7 @@ const Dashboard = () => {
               </p>
             </div>
             <div className="col-span-1 px-10">
-              <h1 className="text-4xl font-semibold py-3">Your Events</h1>
+              <h1 className="lg:text-4xl font-semibold py-3">Your Events</h1>
               {selectedCards.length > 0 ? (
                 <div className="rounded-lg">
                   <div>

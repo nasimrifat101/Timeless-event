@@ -17,7 +17,7 @@ const ServiceDetails = ({ card }) => {
       <div>
         <div className="my-5">
           <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card m-3 md:m-0 lg:w-96 bg-base-100 shadow-xl">
               <div className="card-body h-[350px]">
                 <h2 className="card-title text-2xl">{title}</h2>
                 <div className="flex justify-between">

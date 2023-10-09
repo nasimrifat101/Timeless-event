@@ -9,7 +9,7 @@ const Services = () => {
   return (
     <div>
       <Nav />
-      <div className="max-w-6xl mx-auto grid grid-cols-3 gap-4">
+      <div className="max-w-6xl mx-auto flex flex-col justify-center items-center md:grid lg:grid-cols-3 gap-4">
         {sCards.map((card) => (
           <Link key={card.id} to={`/details/${card.id}`}>
             <ServiceDetails card={card} />

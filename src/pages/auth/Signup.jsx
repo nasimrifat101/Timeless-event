@@ -86,8 +86,8 @@ const Signup = () => {
           <div className="flex flex-col w-full border-opacity-50">
             <div className="grid h-fit card rounded-box place-items-center">
               <div className="">
-                <div className="hero-content flex-col">
-                  <div className="card w-[500px] max-w-xl border border-black bg-base-100">
+                <div className="lg:hero-content flex-col">
+                  <div className="card lg:w-[500px] max-w-xl  border border-black bg-base-100">
                     <h1 className="text-2xl px-8 pt-10 font-bold">
                       Create An Account
                     </h1>
@@ -169,7 +169,7 @@ const Signup = () => {
             <div className="divider">OR</div>
             <div className="grid h-fit card rounded-box place-items-center">
               <div className="space-y-3 flex flex-col mb-10">
-                <button onClick={handleGoogleLog} className="btn btn-outline rounded-full w-96">
+                <button onClick={handleGoogleLog} className="btn btn-outline rounded-full lg:w-96">
                   <BsGoogle className="text-xl"></BsGoogle>Continue With Google
                 </button>
               </div>

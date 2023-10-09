@@ -83,10 +83,10 @@ const Brainstorm = () => {
   return (
     <div className="bg-white">
       <Nav />
-      <div className="max-w-6xl mx-auto my-10 grid grid-cols-2">
+      <div className="max-w-6xl mx-auto my-10 grid lg:grid-cols-2 p-5 lg:p-0">
         <div>
           <h1 className="text-4xl">Plan your big day</h1>
-          <div className="flex items-center space-x-2">
+          <div className="lg:flex items-center space-x-2">
             <div className="form-control">
               <select
                 className="input input-bordered w-fit p-3"
@@ -110,23 +110,23 @@ const Brainstorm = () => {
           </div>
 
           <div className="py-5">
-            <h1 className="text-2xl">Create your list of ideas</h1>
+            <h1 className="lg:text-2xl">Create your list of ideas</h1>
             <input
               type="text"
               id="brainstorm-box"
               placeholder="write your idea one by one"
               ref={brainstormBoxRef}
-              className="input input-bordered w-[430px] rounded-xl"
+              className="input input-bordered lg:w-[430px] rounded-xl"
               onKeyDown={handleInputIdeas}
             />
           </div>
           <div className="my-5">
             <h1 className="text-2xl">Time Remaining</h1>
             <div className="flex space-x-3">
-              <p className="font-bebas text-2xl">Days: {remainingTime.days}</p>
-              <p className="font-bebas text-2xl">Hours: {remainingTime.hours}</p>
-              <p className="font-bebas text-2xl">Minutes: {remainingTime.minutes}</p>
-              <p className="font-bebas text-2xl">Seconds: {remainingTime.seconds}</p>
+              <p className="font-bebas lg:text-2xl">Days: {remainingTime.days}</p>
+              <p className="font-bebas lg:text-2xl">Hours: {remainingTime.hours}</p>
+              <p className="font-bebas lg:text-2xl">Minutes: {remainingTime.minutes}</p>
+              <p className="font-bebas lg:text-2xl">Seconds: {remainingTime.seconds}</p>
             </div>
           </div>
         </div>

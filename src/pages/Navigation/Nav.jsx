@@ -82,7 +82,7 @@ const Nav = () => {
           </div>
           <Link
             to="/"
-            className="btn btn-ghost normal-case text-3xl font-bebas"
+            className="btn btn-ghost normal-case text-xl lg:text-3xl font-bebas"
           >
             Timeless Events
           </Link>
@@ -93,7 +93,7 @@ const Nav = () => {
         <div className="navbar-end">
           {user ? (
             <div className="flex items-center space-x-2">
-              <p className="text-black">{user.displayName}</p>
+              <p className="text-black hidden md:block">{user.displayName}</p>
               {user.photoURL && (
                 <img
                   className="w-8 h-8 rounded-full"
@@ -103,14 +103,14 @@ const Nav = () => {
               )}
               <p
                 onClick={logOut}
-                className="btn w-32 bg-gray-700 text-white hover:bg-green-300 hover:text-black font-semibold"
+                className="btn lg:w-32 bg-gray-700 text-white hover:bg-green-300 hover:text-black font-semibold"
               >
                 Log Out
               </p>
             </div>
           ) : (
             <Link to="/login">
-              <p className="btn w-32 bg-gray-700 text-white hover:bg-green-300 hover:text-black font-semibold">
+              <p className="btn lg:w-32 bg-gray-700 text-white hover:bg-green-300 hover:text-black font-semibold">
                 Login
               </p>
             </Link>

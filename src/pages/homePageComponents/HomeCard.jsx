@@ -5,7 +5,7 @@ const HomeCard = ({ card }) => {
 
   return (
     <div className="">
-      <div className="card card-compact w-96 bg-transparent ">
+      <div className="card card-compact lg:w-96 bg-transparent ">
         <figure>
           <img
             src={img}

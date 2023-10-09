@@ -48,12 +48,12 @@ const Details = () => {
     <div>
       <Nav></Nav>
       <div className="max-w-6xl mx-auto mt-5">
-        <div className="grid grid-cols-2">
+        <div className="grid lg:grid-cols-2">
           <div>
-            <img src={img} alt="" className="w-full" />
+            <img src={img} alt="" className="w-screen lg:w-full" />
           </div>
           <div className="space-y-4 bg-white p-10">
-            <h1 className="text-7xl font-semibold">{title}</h1>
+            <h1 className="text-4xl lg:text-7xl font-semibold">{title}</h1>
             <p className="text-lg">{description}</p>
             <p className="font-semibold text-4xl">Our Features</p>
             {features.map((feature, index) => (

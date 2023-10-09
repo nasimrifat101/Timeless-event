@@ -22,7 +22,7 @@ const Reviews = () => {
   };
 
   return (
-    <div className="h-[500px] bg-[#016A70] p-20">
+    <div className="h-[500px] bg-[#016A70] p-20 hidden lg:block">
       <div className="max-w-6xl mx-auto grid grid-cols-3">
         <div className="col-span-1 bg-[#FF6969] h-full p-10">
           <h1 className="text-6xl mt-10 pb-6 font-semibold">Client reviews</h1>
