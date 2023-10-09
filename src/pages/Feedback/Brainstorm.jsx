@@ -133,7 +133,7 @@ const Brainstorm = () => {
         {/* second div */}
         <div>
           <div>
-            <h1 className="text-4xl">
+            <h1 className="text-2xl lg:text-4xl">
               {selectedEvent
                 ? `${selectedEvent}`
                 : "Select an event to brainstorm ideas"}

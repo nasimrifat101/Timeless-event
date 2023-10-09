@@ -25,7 +25,7 @@ const ContactUs = () => {
       <h1 className="font-semibold text-4xl mb-5 text-center">Say Hello</h1>
       <div className="grid lg:grid-cols-3 max-w-6xl mx-auto">
         <div className="col-span-2 lg:h-[400px] px-3 md:px-0  md:p-14">
-          <h1 className="text-2xl font-young">
+          <h1 className="md:text-2xl font-young">
             Hello there my name is{" "}
             <input
               ref={nameRef}
@@ -34,7 +34,7 @@ const ContactUs = () => {
               className="bg-transparent outline-none border-b-2"
             />
           </h1>
-          <h1 className="text-2xl pt-10 font-young">
+          <h1 className="md:text-2xl pt-10 font-young">
             I'm looking for a team to help me with
             <textarea
               ref={textareaRef}
@@ -43,7 +43,7 @@ const ContactUs = () => {
               className="w-full bg-transparent outline-none border-b-22 h-32"
             ></textarea>
           </h1>
-          <h1 className="text-2xl font-young">
+          <h1 className="md:text-2xl font-young">
             You can reach me at{' '}
             <input
               type="text"
