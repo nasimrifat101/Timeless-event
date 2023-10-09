@@ -12,6 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ContactUs from "../contact/ContactUs";
 
 const Home = () => {
   const cards = useLoaderData();
@@ -77,6 +78,9 @@ const Home = () => {
       </div>
       <div data-aos="fade-in">
         <Recent></Recent>
+      </div>
+      <div data-aos="fade-down">
+        <ContactUs></ContactUs>
       </div>
       <Footer></Footer>
       <ToastContainer position="top-right" />

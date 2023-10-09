@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Nav from "../Navigation/Nav";
 import { useState, useEffect, useRef } from "react";
 
@@ -120,7 +121,7 @@ const Brainstorm = () => {
             />
           </div>
           <div className="my-5">
-            <h1 className="text-3xl">Time Remaining</h1>
+            <h1 className="text-2xl">Time Remaining</h1>
             <div className="flex space-x-3">
               <p className="font-bebas text-2xl">Days: {remainingTime.days}</p>
               <p className="font-bebas text-2xl">Hours: {remainingTime.hours}</p>

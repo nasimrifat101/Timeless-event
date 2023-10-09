@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         'bebas': ['Bebas Neue', 'sans-serif'],
+        'young': ['Young Serif', 'serif'],
       },
     },
   },
