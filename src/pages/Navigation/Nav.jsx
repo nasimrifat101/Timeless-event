@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../authProvider/AuthPrivider";
+import { CiLogin, CiLogout } from "react-icons/ci";
 
 const Nav = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -26,30 +27,30 @@ const Nav = () => {
           <span className="font-young">Services</span>
         </NavLink>
       </li>
-     {
-      user &&  <li>
-      <NavLink
-        className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "text-[#42ea5b] underline" : ""
-        }
-        to="/dashboard"
-      >
-        <span className="font-young">Dashboard</span>
-      </NavLink>
-    </li>
-     }
-       {
-      user &&  <li>
-      <NavLink
-        className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "text-[#42ea5b] underline" : ""
-        }
-        to="/brainstorm"
-      >
-        <span className="font-young">Brainstorm</span>
-      </NavLink>
-    </li>
-     }
+      {user && (
+        <li>
+          <NavLink
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "text-[#42ea5b] underline" : ""
+            }
+            to="/dashboard"
+          >
+            <span className="font-young">Dashboard</span>
+          </NavLink>
+        </li>
+      )}
+      {user && (
+        <li>
+          <NavLink
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "text-[#42ea5b] underline" : ""
+            }
+            to="/brainstorm"
+          >
+            <span className="font-young">Brainstorm</span>
+          </NavLink>
+        </li>
+      )}
     </>
   );
   return (
@@ -96,24 +97,50 @@ const Nav = () => {
               <p className="text-black hidden md:block">{user.displayName}</p>
               {user.photoURL && (
                 <img
-                  className="w-8 h-8 rounded-full"
+                  className="w-8 h-8 rounded-full hidden lg:block"
                   src={user.photoURL}
                   alt="User Profile"
                 />
               )}
-              <p
-                onClick={logOut}
-                className="btn lg:w-32 bg-gray-700 text-white hover:bg-green-300 hover:text-black font-semibold"
-              >
-                Log Out
-              </p>
+              <div>
+                <div className="block lg:hidden">
+                  <button className="" onClick={logOut}>
+                    {user.photoURL && (
+                      <img
+                        className="w-8 h-8 rounded-full"
+                        src={user.photoURL}
+                        alt="User Profile"
+                      />
+                    )}
+                  </button>
+                </div>
+                <div className=" hidden lg:block">
+                  {" "}
+                  <p
+                    onClick={logOut}
+                    className="btn lg:w-32 bg-gray-700 text-white hover:bg-green-300 hover:text-black font-semibold"
+                  >
+                    Log Out
+                  </p>
+                </div>
+              </div>
             </div>
           ) : (
-            <Link to="/login">
-              <p className="btn lg:w-32 bg-gray-700 text-white hover:bg-green-300 hover:text-black font-semibold">
-                Login
-              </p>
-            </Link>
+            <div>
+              <div className=" hidden lg:block ">
+                <Link to="/login">
+                  <p className="btn lg:w-32 bg-gray-700 text-white hover:bg-green-300 hover:text-black font-semibold">
+                    Login
+                  </p>
+                </Link>
+              </div>
+
+              <div className="block lg:hidden">
+                <button className="btn text-xl">
+                  <CiLogin></CiLogin>
+                </button>
+              </div>
+            </div>
           )}
         </div>
       </div>

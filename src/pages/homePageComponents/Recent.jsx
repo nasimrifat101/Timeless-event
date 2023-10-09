@@ -5,7 +5,7 @@ const Recent = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    fetch("/public/images.json")
+    fetch("/images.json")
       .then((res) => res.json())
       .then((data) => setImages(data));
   }, []);

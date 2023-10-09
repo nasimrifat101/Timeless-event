@@ -86,7 +86,7 @@ const Brainstorm = () => {
       <div className="max-w-6xl mx-auto my-10 grid lg:grid-cols-2 p-5 lg:p-0">
         <div>
           <h1 className="text-4xl">Plan your big day</h1>
-          <div className="lg:flex items-center space-x-2">
+          <div className="lg:flex items-center lg:space-x-2">
             <div className="form-control">
               <select
                 className="input input-bordered w-fit p-3"
@@ -120,7 +120,7 @@ const Brainstorm = () => {
               onKeyDown={handleInputIdeas}
             />
           </div>
-          <div className="my-5">
+          <div className="mb-5 lg:my-5">
             <h1 className="text-2xl">Time Remaining</h1>
             <div className="flex space-x-3">
               <p className="font-bebas lg:text-2xl">Days: {remainingTime.days}</p>
